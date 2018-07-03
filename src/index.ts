@@ -10,7 +10,7 @@ var robot = require('robotjs');
 @RpsModule("robotjs")
 export default class RPSRobotjs {
 
-  @rpsAction({defaultName:'keyboard'})
+  @rpsAction({verbName:'keyboard'})
   keyboard (ctx:RpsContext,opts:KeyboardOpts, text:string) : Promise<any> {
 
     return new Promise( (resolve, reject) => {
@@ -25,7 +25,7 @@ export default class RPSRobotjs {
     });
   }
 
-  @rpsAction({defaultName:'mouse'})
+  @rpsAction({verbName:'mouse'})
   mouse (ctx:RpsContext,opts:MouseOpts, x?:number, y?:number) : Promise<any> {
 
     return new Promise( (resolve, reject) => {
@@ -48,7 +48,7 @@ export default class RPSRobotjs {
     });
   }
 
-  @rpsAction({defaultName:'desktopInfo'})
+  @rpsAction({verbName:'desktopInfo'})
   desktopInfo (ctx:RpsContext,opts:{}) : Promise<any> {
     return new Promise( (resolve, reject) => {
       let mousePos = robot.getMousePos();
