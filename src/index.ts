@@ -1,12 +1,11 @@
-/**
- * @module RobotJS
- */
-
 import {RpsContext,RpsModule,rpsAction} from 'rpscript-interface';
 import R from 'ramda';
 
 var robot = require('robotjs');
 
+/** RobotJS Module
+ * @namespace RobotJS
+*/
 @RpsModule("robotjs")
 export default class RPSRobotjs {
 
